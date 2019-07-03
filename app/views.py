@@ -3,4 +3,7 @@ from app import app
 
 @app.route('/')
 def index():
-	return render_template('index.html')
+	heading = "Python Tutorial"
+	subheading = "This is the subheading of our page"
+	foods = ['pasta','pizza','salad','dessert']
+	return render_template('index.html', heading=heading, subheading=subheading, foods=foods)
