@@ -1,6 +1,6 @@
 # 102
 
-We can get pyton to return basic html but we don't want to write all our html code for our pages inside our [views.py](app/views.py) file as it will make it difficult to manage. Flask has the ablity to send whole files instead of just basic html.
+We can get python to return basic html but we don't want to write all our html code for our pages inside our [views.py](app/views.py) file as it will make it difficult to manage. Flask has the ablity to send whole files instead of just basic html.
 
 	pip install -r requirements.txt
 	python run.py
