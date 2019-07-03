@@ -1,22 +1,17 @@
-# 102
+# 103
 
-We can get python to return basic html but we don't want to write all our html code for our pages inside our [views.py](app/views.py) file as it will make it difficult to manage. Flask has the ablity to send whole files instead of just basic html.
+Static text is useful but sometime we will need to dynamically allocate the information. This is where variables are useful. 
 
-	pip install -r requirements.txt
 	python run.py
-## New Files/Folders
 
-* Create a new directory called templates inside the app directory
-* Create a new file called index.html in the template directory
-* Use the basic boostrap [starter template](https://getbootstrap.com/docs/4.3/getting-started/introduction/#starter-template) for the index.html file
-
-## [requirements.txt](requirements.txt)
-
-We need to add Jinja2 to our requirments and run 
-	
-	pip install -r requirements.txt
 
 ## [views.py](app/views.py)
+In out index function we create
+* Two string variables
+* A list of foods. Lists in python are the same as array's in javascript
+* Update the render_template function to include the variables created. 
 
-* On the first line of our [views.py](app/views.py) file we need to add render_template to the import
-* Change the index function so it returns render_template instead of just plain html
+## [index.html](app/templates/index.html)
+
+* Change our basic H1 to a jumbotron and render some variables
+* Create an unordered list of foods
