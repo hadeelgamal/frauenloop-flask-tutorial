@@ -1,17 +1,15 @@
-# 103
+# 104
 
-Static text is useful but sometime we will need to dynamically allocate the information. This is where variables are useful. 
+Now that we have some basic variables in place lets create a new page that lists out restaurants that we have in a dictionary (A python dictionary is similar to a JSON object) 
 
 	python run.py
 
 
 ## [views.py](app/views.py)
-In out index function we create
-* Two string variables
-* A list of foods. Lists in python are the same as array's in javascript
-* Update the render_template function to include the variables created. 
+* Create a new route and new function for our restuaruants page. 
+* Inside the function render the template for restaurants and pass it the heading, subheading and dictionary of restaurants. 
 
-## [index.html](app/templates/index.html)
+## [restaurants.html](app/templates/restaurants.html)
 
-* Change our basic H1 to a jumbotron and render some variables
-* Create an unordered list of foods
+* Create a new html file. You can copy the index.html and modify it slightly
+* Display a list of restaurant names and their address. 
