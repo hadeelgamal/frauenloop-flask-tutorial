@@ -1,5 +1,7 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, request
 from app import app
+
+import requests, json
 
 restaurants = [
     {
@@ -56,3 +58,11 @@ def get_restaurants():
 	heading = "restaurants"
 	subheading = "A selection of the best places to eat locally"
 	return render_template('restaurants.html', heading=heading, subheading=subheading, restaurants=restaurants)
+
+@app.route('/randomusers')
+def randos():
+    heading = "API's"
+    subheading = "Accessing the Random User API"
+    url = "https://randomuser.me/api/?results=50"
+    response = requests.request("GET", url)
+    return render_template('randomusers.html', heading=heading, subheading=subheading, people=response.json())

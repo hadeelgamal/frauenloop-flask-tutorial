@@ -13,8 +13,8 @@
       <div class="col-md-12">
         <ul>
           {% for person in people.results %}
-            <li>{{ restaurant.name }}, {{restaurant.address}}</li>
-          {% endfor %}
+            <li>{{ person.name.title}} {{ person.name.first}} {{ person.name.last}} </li>
+          {% endfor%}
         </ul>      
       </div>
     </div>  
