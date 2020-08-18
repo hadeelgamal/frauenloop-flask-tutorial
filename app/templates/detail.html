@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}
+{{heading}}
+{% endblock %}
+
+{% block content %}
+  
+  {% include 'partials/jumbotron.html' %}
+
+  <img src="{{ project.src.large }}">
+
+{% endblock%}

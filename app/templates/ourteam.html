@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+{{heading}}
+{% endblock %}
+
+{% block content %}
+
+  {% include 'partials/jumbotron.html' %}
+    <div class="container">
+        <div id="thing" class="row">
+  {% for person in people.results %}
+  <div class="col column" align="center">
+   <img class="img" src="{{ person.picture.large }}"> 
+    <p class="person"> {{ person.name.first }} {{ person.name.last}}</p>
+    <div class= "nat">
+<span class="flag-icon flag-icon-{{person.nat| lower}}"></span>
+</div>
+  <ul class="social">
+      <li class="fab fa-github {{person.gender }} "></li>
+      <li class="fab fa-facebook-f {{person.gender}}"></li>
+      <li class="fab fa-twitter {{person.gender}} "></li>
+  </ul>
+ </div>
+{%endfor%}
+    </div>  
+  </div>
+
+
+{% endblock %}

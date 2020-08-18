@@ -1,14 +1,40 @@
 <!doctype html>
 <html lang="en">
   <head>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
-    <title>{% block title %}{% endblock %}</title>
+    <script src="{{ url_for('static', filename='js/menu.js') }}"> </script>
+<link rel="stylesheet" media="all" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.3.1/css/flag-icon.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+
+<title>{% block title %}{% endblock %}</title>
+      <div onclick="openMenu()" id="menu_open" class="menu_open">
+        <i class="fa fa-bars"></i>
+    </div>
+    <nav id="nav" class="active">
+        <div onclick="closeMenu()" id="menu_close" class="menu_close">
+            <i class="fa fa-times"></i>
+        </div>
+        <ul>
+            <li><a href="/">
+                    <i class="fa fa-home"></i>
+                    Our Work</a></li>
+            <li><a href="/OurTeam">
+                    <i class="fa fa-address-card"></i>
+                    Our Team</a></li>
+            <li><a href="/project/<proj_id>">
+                    <i class="fa fa-image"></i>
+                    About</a></li>
+        </ul>
+    </nav>
   </head>
   <body>
     

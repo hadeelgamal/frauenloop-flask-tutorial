@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+}
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+ @media screen and (max-width: 600px) {
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    } 
+} 
+
+.menu_open {
+    height: 60px;
+    width: 60px;
+    margin: 20px;
+    cursor: pointer;
+    background-color: white;
+    text-align: center;
+    line-height: 4;
+    border-radius: 50px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, .35);
+    float: right;
+}
+
+.menu_open i {
+    font-size: 20px;
+    color: #777;
+}
+
+.menu_close {
+    height: 60px;
+    width: 60px;
+    margin: 20px;
+    cursor: pointer;
+    display: none;
+    background-color: white;
+    text-align: center;
+    line-height: 4;
+    border-radius: 50px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, .35);
+    float: right;
+}
+
+.menu_close i {
+    font-size: 20px;
+    color: #777;
+}
+
+nav {
+    position: fixed;
+    height: 100%;
+    width: 350px;
+    max-width: 100%;
+    right: 0;
+    background: linear-gradient(to bottom, #7b4397a7, #dc2430a7), url('https://source.unsplash.com/random');
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.8s, opacity 0.8s linear;
+    box-shadow: 5px 0 25px rgba(0, 0, 0, .24);
+}
+
+nav .active {
+    display: block !important;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 20px 0 20px 0;
+    margin: 25px 0;
+    transition: .8s ease-in-out;
+}
+
+nav ul li:hover {
+    background-color: rgba(255, 255, 255, .45);
+
+}
+
+nav ul li a {
+    text-decoration: none;
+    display: block;
+    color: #fff;
+    margin-left: 50px;
+    text-transform: uppercase;
+    font-family: helvetica;
+}
+
+nav ul li a i {
+    margin: 0 10px;
+}
+
+.person {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.male {
+    color: Blue;
+}
+
+.female {
+    color: #fc3fb0;
+}
+
+.social{
+padding-left: 0px;
+}
+
+.img {
+    margin: 10px;
+    border-radius: 50%;
+
+}
+
+.myrow{
+    margin-bottom: 10px;
+}
+
+li {
+margin: 2px;
+}
+
+.active{
+    z-index: 9999;
+}
+
+.col{
+    flex-grow: 0;
+}
+
+h2{
+    background-color: aquamarine;
+}
+.jumbotron{
+    background-color: #212529;
+    color: #f8f9fa;
+
+}
+
+.container{
+    padding-right: 0px;
+    padding-left: 0px;
+}

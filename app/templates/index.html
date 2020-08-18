@@ -7,17 +7,40 @@
 {% block content %}
   
   {% include 'partials/jumbotron.html' %}
-  
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <ul>
-          {% for food in foods %}
-            <li>{{ food }}</li>
-          {% endfor %}
-        </ul>      
+    <div class="container">
+        <h2> Fashion Photography</h2>
+        {% for f in fashion %}
+          {% if loop.index0 % 4 == 0 %}
+            {% if loop.index0 != 0 %}
+            </div>
+            {% endif %}
+            <div class="row myrow">
+          {% endif %}
+            <div class="col-md-3">
+              <a href="/project/{{f.id}}"> 
+                <img src="{{ f.landscape }}" width="100%">
+              </a>
+            </div>
+        {% endfor %}
       </div>
-    </div>  
-  </div>  
+
+      <div class="container">
+      <h2> Architecture Photography</h2>
+       {% for b in building %}
+        {% if loop.index0 % 4 == 0 %}
+          {% if loop.index0 != 0 %}
+            </div>
+            {% endif %}
+        <div class="row myrow">
+            {% endif %}
+        <div class="col-md-3">
+        <a href="/project/{{b.id}}"> 
+        <img src="{{ b.landscape }}" width="100%">
+        </a>
+          </div>
+            {% endfor %}  
+
+      </div>
 
 {% endblock%}
+
